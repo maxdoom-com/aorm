@@ -7,10 +7,10 @@ import config
 orm.connect_sqlite3( 'db.sqlite3' )
 
 class Users(Model):
-	pass
+    pass
 
 class Posts(Model):
-	pass
+    pass
 
 
 p = Posts.create()
@@ -28,11 +28,11 @@ p.save()
 
 posts = Posts.all()
 for s in posts:
-	print s
+    print s
 
 first = Posts.one()
 print first
 first.delete()
 
 for roh in Posts.raw('SELECT id, slug AS test FROM posts'):
-	print roh
+    print roh
