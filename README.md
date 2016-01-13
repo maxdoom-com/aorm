@@ -1,8 +1,10 @@
-# aorm -- another orm
+# aorm -- The configuration agnostic ORM
 
 ## Description
 This is an super lightweight orm for python.
-It supports oursql and sqlite3 as database drivers.
+It supports at the moment oursql and sqlite3 as database drivers.
+
+You might take a look at my development plans on <a href="http://maxdoom.com/2016/01/13/aorm-dev-status/" target="_blank">my kanban board</a>.
 
 ## License
 BSD (2-clause)
