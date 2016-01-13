@@ -28,11 +28,11 @@ p.save()
 
 posts = Posts.all()
 for s in posts:
-    print s
+    print(s)
 
 first = Posts.one()
-print first
+print(first)
 first.delete()
 
-for roh in Posts.raw('SELECT id, slug AS test FROM posts'):
-    print roh
+for raw in Posts.raw('SELECT id, slug AS test FROM posts'):
+    print(raw)
