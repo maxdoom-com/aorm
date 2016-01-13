@@ -1,8 +1,8 @@
 """
-An ORM (AORM) for Python using OurSql.
-============================================
-COPYRIGHT (C) 2015 Nico Hoffmann
---------------------------------------------
+An configuration agnostic ORM (AORM) for Python using OurSql.
+=============================================================
+COPYRIGHT (C) 2015-2016 Nico Hoffmann
+-------------------------------------------------------------
 Limitations:
 
 Aorm only uses oursql or sqlite3. It should
@@ -10,9 +10,9 @@ be quite simple to port it to other database
 drivers as long as these use parameterized
 queries.
 
---------------------------------------------
+-------------------------------------------------------------
 How it works:
---------------------------------------------
+-------------------------------------------------------------
 from aorm import orm, Model
 import config
 
@@ -40,14 +40,7 @@ data = Join.raw('SELECT u.*, c.* FROM users u, cats c WHERE c.user_id = u.id')
 
 """
 
-__author__ = 'Nico Hoffmann <n@maxdoom.com>'
-__credits__ = '''The Roots:
-
-There is a whole bunch of ORMs that influenced this tiny orm.
-
-- Most noteable is idiorm/paris from the php world.
-- SQLObject is been an inspiration as well.
-'''
+__author__ = 'Nico Hoffmann <mailme@maxdoom.com>'
 
 import re as _re
 from collections import OrderedDict
