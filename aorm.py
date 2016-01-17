@@ -287,6 +287,17 @@ class Model(Object):
             yield cls(data=row, mode='update', bad=False)
     
     @classmethod
+    def execute(cls, query, params=()):
+        """
+            Executes a query without returning results.
+        """
+        cursor = orm.cursor()
+        cursor.execute(query, params)
+        
+        for row in cursor:
+            return # just return when the query is done
+    
+    @classmethod
     def count(cls, conditions={}, group_by=None):
         """
             Returns the count of entries matching the query.
