@@ -1,4 +1,4 @@
 env
 *.pyc
-config.*
-db.sqlite3
+__pycache__
+test.db

@@ -104,13 +104,10 @@ class Object(object):
     pass
 
 
-class Model(Object):
-    __metaclass__ = MetaModel
+
+class Model(Object, metaclass=MetaModel):
     """
         The base class of all models.
-        
-        for python 3.4 change the definition to:
-        class Model(Object, metaclass=MetaModel)
     """
     
     def __setattr__(self, key, value):

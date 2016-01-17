@@ -6,6 +6,22 @@ It supports at the moment oursql and sqlite3 as database drivers.
 
 You might take a look at my development plans on <a href="http://maxdoom.com/2016/01/13/aorm-dev-status/" target="_blank">my kanban board</a>.
 
+## Supported Python Versions
+This library works with python 2.7.
+If you intend to use it with python 3.4 see the definition of the `class Model` and change it like this:
+
+- Python 2.7:
+```
+class Model(Object):
+	__metamodel__ = MetaModel
+	...
+```
+- Python 3.4:
+```
+class Model(Object, metamodel=MetaModel):
+	....
+```
+
 ## License
 BSD (2-clause)
 
