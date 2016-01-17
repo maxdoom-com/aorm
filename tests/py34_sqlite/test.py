@@ -79,31 +79,3 @@ for post in Posts.all({ 'author':2 }):
 print("# Expected results: 2 2")
 print("Users.count after tests: %d" % Users.count())
 print("Posts.count after tests: %d" % Posts.count())
-
-
-"""
-
-p = Posts.create()
-p.slug='slug3'
-p.title='title 3'
-p.content='''Content
-of
-post
-3.
-'''
-p.save()
-
-p.slug='slug4'
-p.save()
-
-posts = Posts.all()
-for s in posts:
-    print(s)
-
-first = Posts.one()
-print(first)
-first.delete()
-
-for raw in Posts.raw('SELECT id, slug AS test FROM posts'):
-    print(raw)
-"""
